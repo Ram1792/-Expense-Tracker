@@ -33,13 +33,3 @@ Authentication: JWT, Bcrypt.js
 Hosting: Render
 
 
-Project Structure
-
-Expense_Tracker/
-├── backend/
-│   ├── dist/         
-│   ├── models/      
-│   ├── routes/      
-│   └── server.js      
-└── expense-tracker/   
-
