@@ -4,7 +4,7 @@ A full-stack, responsive expense management web application built using the MERN
 Live Demo
 Check out the live application hosted on Render:
 
-Live Demo Link (Replace this with your actual live URL)
+Live Demo Link : https://expense-tracker-z0jr.onrender.com
 
 Features
 User Authentication: Secure user registration and login functionality utilizing JWT (JSON Web Tokens).
