@@ -1,65 +1,66 @@
 Expense Tracker
-A full-stack, responsive expense management web application built using the MERN stack (MongoDB, Express, React, Node.js). This app allows users to seamlessly track income and expenses, analyze financial summaries, and securely manage their personal budgets.
+A full-stack web application for tracking personal income and expenses. Built using the MERN stack (MongoDB, Express.js, React, Node.js), it provides real-time financial updates, user authentication, and interactive balance tracking within a single unified platform.
 
 Live Demo
-Check out the live application hosted on Render:
-Link : https://expense-tracker-z0jr.onrender.com/
+Access the live application hosted on Render:
 
-Features:
-User Authentication: Secure user registration and login functionality utilizing JWT (JSON Web Tokens).
-Expense & Income Tracking: Add, edit, and delete income or expense entries with categories and custom descriptions.
-Financial Analytics: Visual graphs and balance summaries to keep track of spending habits.
-Unified Single-Server Architecture: Express server directly serves the compiled React frontend production build alongside API endpoints.
-Cloud Database: Integrated with MongoDB Atlas for persistent cloud storage.
+Expense Tracker Web App:
 
-Tech Stack:
+Key Features
+User Authentication: Secure user signup and login using JSON Web Tokens (JWT) and encrypted passwords.
 
-Frontend
+Transaction Management: Easily log, edit, and delete income and expense records with custom categories.
 
-React.js (Vite build setup)
-Axios (API communication)
-CSS / Tailwind CSS (Styling & layout)
+Financial Summary: Dynamic tracking of total income, overall expenses, and remaining balance.
 
-Backend
+Unified Deployment: Single-server setup where Express serves both API routes and the compiled React static build.
 
-Node.js & Express.js (REST API & static production file serving)
-MongoDB & Mongoose (Database modeling and storage)
-JSON Web Token (JWT) & Bcrypt.js (Authentication & password hashing)
+Cloud Database: Persistent, multi-user data storage powered by MongoDB Atlas.
 
-Prerequisites :
-Node.js installed on your local machine
-MongoDB Atlas account or local MongoDB instance
+Tech Stack
+Frontend: React (Vite), Axios, CSS
 
-Installation & Setup:
+Backend: Node.js, Express.js
 
+Database: MongoDB Atlas (via Mongoose)
+
+Authentication: JWT, Bcrypt.js
+
+Hosting: Render
+
+Project Structure
+Plaintext
+Expense_Tracker/
+├── backend/
+│   ├── dist/           # Production build of the React frontend
+│   ├── models/         # Database models (User, Expense, Income)
+│   ├── routes/         # Express API routes
+│   └── server.js       # Express server entry point
+└── expense-tracker/    # React source files and components
+
+Local Setup
+1. Clone the Repository
 Bash
 git clone https://github.com/Ram1792/-Expense-Tracker.git
 cd Expense_Tracker
-Backend Setup:
-
+2. Configure Backend
 Bash
 cd backend
 npm install
-Create a .env file in the backend/ directory:
+Create a .env file in the backend directory:
 
 Code snippet
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_jwt_secret_key
-Frontend Setup:
-
+3. Build & Run
 Bash
+# Build the frontend assets inside expense-tracker
 cd ../expense-tracker
 npm install
-npm run dev
-Run Backend Server:
+npm run build
 
-Bash
+# Start the Express server
 cd ../backend
-npm run dev  # or node server.js
+node server.js
 
-Deployment :
-This application is configured for deployment as a unified web service on Render:
-The frontend static build (dist) is served by Express via app.use(express.static(...)).
-All unmatched route requests default to index.html for single-page client routing.
-Database services are managed remotely via MongoDB Atlas.
